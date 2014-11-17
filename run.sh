@@ -14,7 +14,7 @@ else
     echo "=> Using an existing volume of MySQL"
 fi
 
-# Create the owncloud database if it doesn't exist.
+# Create the ownCloud database if it doesn't exist.
 if [[ ! -d $VOLUME_HOME/owncloud ]]; then
 
     # Start MySQL
@@ -30,7 +30,7 @@ if [[ ! -d $VOLUME_HOME/owncloud ]]; then
 
     OWNCLOUD_DB="owncloud"
 
-    # Generate a random password for the owncloud MySQL user.
+    # Generate a random password for the ownCloud MySQL user.
     OWNCLOUD_PASSWORD=`pwgen -c -n -1 12`
     echo "========================================================================"
     echo
