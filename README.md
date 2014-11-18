@@ -122,7 +122,16 @@ https://<container hostname>/owncloud
 
 Then press **Finish setup**.
 
+
 ## Reference
+
+### How to use ownCloud
+
+Refer to ownCloud documentation to access your files using the web interface:
+[http://doc.owncloud.org/server/7.0/user_manual/files/filesweb.html](http://doc.owncloud.org/server/7.0/user_manual/files/filesweb.html)
+
+You can also access your files with WebDav:
+[http://doc.owncloud.org/server/7.0/user_manual/files/files.html](http://doc.owncloud.org/server/7.0/user_manual/files/files.html)
 
 ### Image Details
 
