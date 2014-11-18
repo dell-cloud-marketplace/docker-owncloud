@@ -127,11 +127,12 @@ Then press **Finish setup**.
 
 ### How to use ownCloud
 
-Refer to ownCloud documentation to access your files using the web interface:
-[http://doc.owncloud.org/server/7.0/user_manual/files/filesweb.html](http://doc.owncloud.org/server/7.0/user_manual/files/filesweb.html)
+Refer to the ownCloud documentation to access your files using the web interface:
+[Accessing files with web console](http://doc.owncloud.org/server/7.0/user_manual/files/filesweb.html)
+
 
 You can also access your files with WebDav:
-[http://doc.owncloud.org/server/7.0/user_manual/files/files.html](http://doc.owncloud.org/server/7.0/user_manual/files/files.html)
+[Accessing files using WebDav](http://doc.owncloud.org/server/7.0/user_manual/files/files.html)
 
 ### Image Details
 
