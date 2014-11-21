@@ -29,7 +29,10 @@ Start your container with:
 As follows: 
 
 ```no-highlight
-sudo docker run -d --name="owncloud" -p 80:80 -p 443:443 -p 3306:3306 -h "my.domain.com" dell/owncloud
+sudo docker run -d --name="owncloud" \
+                -p 80:80 -p 443:443 \
+                -p 3306:3306 \
+                -h "my.domain.com" dell/owncloud
 ```
 
 #### B. Advanced Usage
