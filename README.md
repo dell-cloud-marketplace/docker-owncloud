@@ -29,7 +29,10 @@ Start your container with:
 As follows: 
 
 ```no-highlight
-sudo docker run -d --name="owncloud" -p 80:80 -p 443:443 -p 3306:3306 -h "my.domain.com" dell/owncloud
+sudo docker run -d --name="owncloud" \
+                -p 80:80 -p 443:443 \
+                -p 3306:3306 \
+                -h "my.domain.com" dell/owncloud
 ```
 
 #### B. Advanced Usage
@@ -122,7 +125,17 @@ https://<container hostname>/owncloud
 
 Then press **Finish setup**.
 
+
 ## Reference
+
+### How to use ownCloud
+
+Refer to the ownCloud documentation to access your files using the web interface:
+[Accessing files with web console](http://doc.owncloud.org/server/7.0/user_manual/files/filesweb.html)
+
+
+You can also access your files with WebDav:
+[Accessing files using WebDav](http://doc.owncloud.org/server/7.0/user_manual/files/files.html)
 
 ### Image Details
 
