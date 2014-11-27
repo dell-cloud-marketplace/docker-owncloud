@@ -99,12 +99,12 @@ mysql -uadmin -pMYHU4RejDh0q -h127.0.0.1 -P3306
 Access the container from your browser:
 
 ```no-highlight
-http://<container hostname>/owncloud 
+http://<container hostname> 
 ```
 
 OR
 ```no-highlight
-https://<container hostname>/owncloud
+https://<container hostname>
 ```
  **NOTE:** Make sure you use the final hostname/FQDN you passed in your docker run command when connecting and doing the initial configuration. ownCloud will take the URL used to access the Installation Wizard and insert it into the config.php file in the 'trusted_domains' setting. After the configuration, users will only be able to log into ownCloud when they point their browsers to a domain name listed in the 'trusted_domains' setting. An IPv4 address can be specified instead of a domain name.
 
@@ -128,13 +128,51 @@ Then press **Finish setup**.
 
 ## Reference
 
-### How to use ownCloud
+### How to use ownCloud Web console
 
 Refer to the ownCloud documentation to access your files using the web interface:
 [Accessing files with web console](http://doc.owncloud.org/server/7.0/user_manual/files/filesweb.html)
 
+### Accessing ownCloud files with WebDav
 
-You can also access your files with WebDav:
+You can also access your files with WebDav by mounting your file system:
+#### 1. Install the WebDAV support using the davfs package
+  
+    sudo apt-get install davfs2
+     
+#### 2. Reconfigure davfs2 to allow access to normal users (select Yes when prompted):
+
+    sudo dpkg-reconfigure davfs2
+
+#### 3. Specify any users that you want to have mount and share privileges in the davfs2 group:
+
+    sudo usermod -aG davfs2 <user>
+
+#### 4. Edit the /etc/fstab file and add the following line for each user for whom you want to give mount privileges for the folder:
+     
+     my.domain.com/remote.php/webdav /home/<user>/owncloud davfs user,rw,noauto 0 0
+
+For each user for whom you want to give mount privileges:
+- Create the folders ```owncloud/``` and ```.davfs2/``` in the **user** directory as follows:
+
+```no-highlight     
+     sudo mkdir /home/<user>/owncloud
+     sudo mkdir /home/<user>/.davfs2
+```
+
+- Create the file ```secrets``` inside the ```.davfs2/``` folder and populate it with your ownCloud login credentials:
+     
+     my.domain.com/remote.php/webdav <username> <password>
+
+#### 5. Ensure that the file is writable by only you by using the file manager or by issuing the following command:
+
+    chmod 600 ~/.davfs2/secrets
+    
+#### 6. Run the following command:    
+
+    mount ~/owncloud
+
+For more information on how to access your ownCloud files using WebDav:
 [Accessing files using WebDav](http://doc.owncloud.org/server/7.0/user_manual/files/files.html)
 
 ### Image Details
