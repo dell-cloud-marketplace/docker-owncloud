@@ -135,7 +135,7 @@ Refer to the ownCloud documentation to access your files using the web interface
 
 ### Accessing ownCloud files with WebDav
 
-You can also access your files with WebDav by mounting your file system:
+You can also access your files with WebDav by mounting your file system as described below:
 #### 1. Install the WebDAV support using the davfs package
   
     sudo apt-get install davfs2
