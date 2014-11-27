@@ -161,8 +161,10 @@ For each user for whom you want to give mount privileges:
 ```
 
 - Create the file ```secrets``` inside the ```.davfs2/``` folder and populate it with your ownCloud login credentials:
-     
+  
+```no-highlight    
      my.domain.com/remote.php/webdav <username> <password>
+```
 
 #### 5. Ensure that the file is writable by only you by using the file manager or by issuing the following command:
 
