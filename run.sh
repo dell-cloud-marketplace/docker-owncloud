@@ -59,7 +59,7 @@ APPLICATION_HOME="/var/www/html"
 
 if [ ! "$(ls -A $APPLICATION_HOME)" ]; then
     # Copy the application folder.
-    cp -r /owncloud $APPLICATION_HOME
+    cp -r /owncloud/* $APPLICATION_HOME
 
     # Update ownership.
     chown -R www-data /var/www/html
