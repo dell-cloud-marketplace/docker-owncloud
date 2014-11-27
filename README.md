@@ -171,6 +171,8 @@ For each user for whom you want to give mount privileges:
 #### 6. Run the following command:    
 
     mount ~/owncloud
+    
+You should be able to access your files through the ```~/owncloud``` mounting point  
 
 For more information on how to access your ownCloud files using WebDav:
 [Accessing files using WebDav](http://doc.owncloud.org/server/7.0/user_manual/files/files.html)
