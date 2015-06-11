@@ -8,7 +8,7 @@ The stack comprises the following components (some are obtained through [docker-
 
 Name       | Version                   | Description
 -----------|---------------------------|------------------------------
-ownCloud   | 7.0.3                     | File sharing platform
+ownCloud   | 8.0.2                     | File sharing platform
 Ubuntu     | see [docker-lamp-base](https://github.com/dell-cloud-marketplace/docker-lamp-base) | Operating system
 MySQL      | see [docker-lamp-base](https://github.com/dell-cloud-marketplace/docker-lamp-base) | Database
 Apache     | see [docker-lamp-base](https://github.com/dell-cloud-marketplace/docker-lamp-base) | Web server
@@ -115,7 +115,7 @@ https://<container hostname>
 #### Welcome to ownCloud's configuration wizard!
 - First, create a new administrator user. Fill in a user login and password.
 - Below, click on **Storage & database**.
-- Keep the default data folder (**/var/www/html/owncloud/data**).
+- Keep the default data folder (**/var/www/html/data**).
 - Select MariaDB/MySQL as database.
 - Fill in MySQL database information:
     - Database user: **owncloud**
