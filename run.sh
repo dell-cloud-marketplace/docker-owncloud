@@ -30,8 +30,9 @@ if [[ ! -d $VOLUME_HOME/owncloud ]]; then
 
     OWNCLOUD_DB="owncloud"
 
-    # Generate a random password for the ownCloud MySQL user.
-    OWNCLOUD_PASSWORD=`pwgen -c -n -1 12`
+    # If not supplied, generate a random password for the owncloud MySQL user.
+    OWNCLOUD_PASSWORD=${OWNCLOUD_PASS:-$(pwgen -s 12 1)}
+
     echo "========================================================================"
     echo
     echo "MySQL owncloud user password:" $OWNCLOUD_PASSWORD
