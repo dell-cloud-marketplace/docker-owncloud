@@ -179,6 +179,15 @@ You should be able to access your files through the ```~/owncloud``` mounting po
 For more information on how to access your ownCloud files using WebDav:
 [Accessing files using WebDav](http://doc.owncloud.org/server/7.0/user_manual/files/files.html)
 
+## Reference
+
+### Environmental Variables
+
+Variable      | Default  | Description
+--------------|----------|-------------------------------------
+MYSQL_PASS    | *random* | Password for MySQL user **admin**
+OWNCLOUD_PASS | *random* | Password for MySQL user **owncloud**
+
 ### Image Details
 
 Inspired by [yankcrime/dockerfiles](https://github.com/yankcrime/dockerfiles.git)
