@@ -42,6 +42,7 @@ Start your container with:
 * Ports 80, 443 (Apache Web Server) and 3306 (MySQL) exposed
 * A named container (**owncloud**)
 * A predefined password for the MySQL **admin** user
+* A predefined password for the OWNCLOUD_PASS **owncloud** user
 * A predefined hostname for the ownCloud container. Make sure to pass the -h option to Docker run with your FQDN if you want webdav to work.
 * Two data volumes (which will survive a restart or recreation of the container). The MySQL data is available in **/data/mysql** on the host. The PHP application files are available in **/app** on the host
 
@@ -53,6 +54,7 @@ sudo docker run -d \
     -v /app:/var/www/html \
     -v /data/mysql:/var/lib/mysql \
     -e MYSQL_PASS="password"  \
+    -e OWNCLOUD_PASS="password"  \
     -h "my.domain.com" \
     --name owncloud \
     dell/owncloud
